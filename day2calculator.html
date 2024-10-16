@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style type="text/css">
+        .inpu{
+            width: 350px;
+            height: 50px;
+            margin-top: 120px;
+            margin-bottom: 0;
+            background-color: black;
+            border: 1px red solid;
+            color: white;
+            font-size: x-large;
+            text-align: right;
+            padding-right: 5px;
+            box-sizing: border-box;
+            letter-spacing: 1px;
+        }
+        .box{
+            height: 550px;
+            width: 350px;
+            background-color: black;
+            margin:  auto;
+            
+            
+        }
+        table{
+            font-size: x-large;
+            padding: 5px;
+            padding-top: 20px;
+            text-align: cent;
+            
+        }
+        .circle td{
+            border-radius: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: 50px;
+            
+            text-align: center;
+            color: white;
+            border: 0;
+            
+        }
+        .in{
+            background-color: rgb(10, 10, 10);
+            color: white;
+        }
+        .equal{
+            background-color: rgb(235, 75, 12);
+        }
+        .out{
+            background-color: rgb(37, 36, 36);
+        }
+        .head{
+            text-align: center;
+             margin-top: 0;
+             margin-bottom: 0;
+            font-size: xxx-large;
+            text-shadow: 3px -2px 6px rgb(235, 75, 12);
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <h1 class="head" >Calculator</h1>
+    
+    <div class="box" data-aos="flip-right" >
+    <input type="text" class="inpu" id="res">
+<table width="350px" class="circle" >
+    <tr>
+        <td class="out" onclick="clr()">C</td>
+        <td class="out" onclick="display('%')">%</td>
+        <td class="out" onclick="back()">⌫</td>
+        <td class="out" onclick="div('÷')">÷</td>
+    </tr>
+    <tr>
+        <td class="in" onclick="display(7)">7</td>
+        <td class="in" onclick="display(8)">8</td>
+        <td class="in" onclick="display(9)">9</td>
+        <td class="out"   onclick="display('x')">x</td>
+    </tr>
+    <tr>
+        <td class="in" onclick="display(4)">4</td>
+        <td class="in" onclick="display(5)">5</td>
+        <td class="in" onclick="display(6)">6</td>
+        <td class="out" onclick="display('-')">-</td>
+    </tr>
+    <tr>
+        <td class="in" onclick="display(1)">1</td>
+        <td class="in" onclick="display(2)">2</td>
+        <td class="in" onclick="display(3)">3</td>
+        <td class="out" onclick="display('+')">+</td>
+    </tr>
+    <tr>
+        <td class="in" onclick="display()">00</td>
+        <td class="in" onclick="display(0)">0</td>
+        <td class="in" onclick="display('.')">.</td>
+        <td class="equal" onclick="eql()">=</td>
+    </tr>
+</table>
+
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+    <script type="text/javascript" src="day2cal.js"></script>
+</body>
+</html>
